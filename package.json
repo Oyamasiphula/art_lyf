@@ -1,0 +1,24 @@
+{
+  "name": "art_lyf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oyamasiphula/art_lyf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oyamasiphula/art_lyf/issues"
+  },
+  "homepage": "https://github.com/Oyamasiphula/art_lyf#readme",
+  "dependencies": {
+    "bower": "^1.8.4",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0"
+  }
+}
