@@ -18,7 +18,7 @@ app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 // <requests> now lets get ready for requests
 // app.get("/", products.home)
-app.get('/', function(req, res){
+app.get('/home', function(req, res){
 	res.render('home');
 })
 app.get('about',function(req,res){
