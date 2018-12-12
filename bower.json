@@ -1,0 +1,17 @@
+{
+  "name": "art_lyf",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "oyamasiphula <oyama@projectcodex.co>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Oyamasiphula/art_lyf",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
