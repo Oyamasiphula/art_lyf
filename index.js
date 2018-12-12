@@ -26,7 +26,7 @@ app.get('about',function(req,res){
 
 })
 // <portSetup>port delcaration
-var port = process.env.PORT || 9090
+var port = process.env.PORT || 5000
 // </portSetup>
 
 // <serveCodeBlocksRun>Lets configure our localhost server's port
