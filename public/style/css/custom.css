@@ -62,6 +62,10 @@ ul.topnav li.icon {
   margin-right: auto;
 }
 
+.ads {
+  margin-top: 1em;
+}
+
 @media screen and (max-width:680px) {
   ul.topnav li:not(:first-child) {
     display: none;
@@ -116,6 +120,7 @@ ul.topnav li.icon {
   text-align: left;
   font-size: 26px;
 }
+
 .wrapper img {
   border-radius: 12em;
   margin: auto;
