@@ -20,10 +20,11 @@ $(function() {
   var message = {
 
     message: [
-      'web development;',
+      'Art;',
+      'fashion development;',
       'eye candy design;',
-      'good movie and popcorn;',
-      'javascript, html, css, nodejs...;'
+      'to be creative;'
+
     ],
     counterS: 0,
     counterL: 0,
@@ -68,14 +69,14 @@ $(function() {
 // [<about skills>
 ;( function( $ ) {
   "use strict";
-  
+
   var $bars = $( ".bar" ),
     methods = {
       init: function() {
-        
+
         // Bind events
         methods.bindEvents();
-        
+
       },
       bindEvents: function() {
 
@@ -101,15 +102,15 @@ $(function() {
 
               });
 
-          }, data.delay || 0 );     
+          }, data.delay || 0 );
 
         });
 
       }
     };
-  
+
   // Initialize on page load
-  methods.init(); 
-    
+  methods.init();
+
 })( jQuery );
 // <about skills>]
