@@ -51,12 +51,14 @@ ul.topnav li.icon {
   display: none;
 }
 
+    /* {  height:20%;
+        width:20%} */
 .profilePic {
   background-repeat: no-repeat;
   position: relative;
   vertical-align: middle;
   width: 372px;
-  height: 346px;
+  height: auto;
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -119,12 +121,6 @@ ul.topnav li.icon {
   display: inline-block;
   text-align: left;
   font-size: 26px;
-}
-
-.wrapper img {
-  border-radius: 12em;
-  margin: auto;
-  display: -webkit-box;
 }
 
 .wrapper a {
