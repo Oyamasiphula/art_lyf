@@ -77,6 +77,16 @@ ul.topnav li.icon {
     float: right;
     display: inline-block;
   }
+  img.profilePic {
+    background-repeat: no-repeat;
+    position: relative;
+    vertical-align: middle;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (max-width:990px) {
