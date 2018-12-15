@@ -23,10 +23,10 @@ ul.topnav {
 }
 
 ul.topnav li {
-  float: left;
-  border: 1px solid #b84348;
-  border-radius: 5px;
-  margin: 1px;
+ display: -webkit-inline-box;
+ border: 1px solid #b84348;
+ border-radius: 5px;
+ margin: 1px;
 }
 
 ul.topnav li a {
@@ -102,7 +102,7 @@ ul.topnav li.icon {
 
   ul.topnav.responsive li {
     float: none;
-    display: inline;
+    display: -webkit-box;
   }
 
   ul.topnav.responsive li a {
@@ -111,6 +111,10 @@ ul.topnav li.icon {
   }
 }
 
+.navItem {
+  padding: 25px;
+  float: right;
+}
 .wrapper {
   margin-bottom: 0;
   text-align: center;
