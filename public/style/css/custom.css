@@ -552,3 +552,8 @@ svg {
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
 }
+small {
+  font-size: 100%;
+  float: right;
+  color: darkgoldenrod;
+}
