@@ -1,42 +1,20 @@
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  box-sizing: border-box;
-}
-:after,
-:before {
-  content: "";
-}
-
-html,
-body {
-  height: 100%;
-}
-
 h1 {
   top: 40%;
   left: 10%;
   display: inline-block;
-
+  border-radius: 10%;
   padding: 10px 15px;
-
   color: hsla(0, 0%, 100%, 0.7);
   text-transform: uppercase;
   text-shadow: 0 0 8px hsla(0, 0%, 100%, 0.6);
   font-family: "Signika Negative", sans-serif;
   font-size: 1.8em;
   font-weight: normal;
-
   background-image: radial-gradient(40% 30%, white, transparent),
-    radial-gradient(100% 8%, hsla(0, 0%, 100%, 0.6), transparent),
-    linear-gradient(transparent, hsla(0, 0%, 0%, 0.5));
+  radial-gradient(100% 8%, hsla(0, 0%, 100%, 0.6), transparent),
+  linear-gradient(transparent, hsla(0, 0%, 0%, 0.5));
   background-repeat: no-repeat;
-
   opacity: 0;
-
   animation: enter 3s ease-in;
   animation-fill-mode: forwards;
 }
