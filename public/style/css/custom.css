@@ -492,12 +492,32 @@ svg {
   width: 300px;
   font-size: initial;
 }
-.formArea {
-  max-width: 30em;
-  width: -webkit-fill-available;
-  border: 1px solid black;
-  font-size: 14px;
-  /* display: block; */
+div.emailBox {
+  margin-top: -40px;
+  }
+div.emailBox input{
+  background-color: cornflowerblue;
+  margin-top: 5px;
+  display: block;
+  color: antiquewhite;
+}
+small#emailText{
+  float: inherit;
+  font-size: large;
+}
+#source {
+  font-size:14px;
+  border: 1px solid #ccc;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 10px;
+  min-height: 10px;
+  overflow: auto;
+  padding: 5px;
+  width: auto;
+  word-break: break-word;
+  max-width: 33%;
+  background-color: white;
 }
 
 .call {
