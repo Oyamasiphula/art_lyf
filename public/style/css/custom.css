@@ -495,7 +495,7 @@ svg {
 div.emailBox {
   margin-top: -40px;
   }
-div.emailBox input{
+ input.button {
   background-color: cornflowerblue;
   margin-top: 5px;
   display: block;
@@ -514,7 +514,7 @@ small#emailText{
   min-height: 10px;
   overflow: auto;
   padding: 5px;
-  width: auto;
+  width: 33%;
   word-break: break-word;
   max-width: 33%;
   background-color: white;
