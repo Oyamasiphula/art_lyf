@@ -29,19 +29,19 @@ app.use(bodyParser.json())
 app.get('/', function(req, res) {
   // console.log(products.getClothes());
   var clothes = [{
-    uploadPicture: URL,
+    uploadPicture: "images/fashion_gallery/tshirt.jpg",
     Type: "TShirt",
     Price: "R200",
     Size: "XS",
     Qty: "2"
   }, {
-    uploadPicture: URL,
+    uploadPicture: "images/fashion_gallery/Optimized-cap.JPG",
     Type: "Cap",
     Price: "R200",
     Size: "M",
     Qty: "2"
   }, {
-    uploadPicture: URL,
+    uploadPicture: "images/fashion_gallery/Optimized-long-sleeve.jpg",
     Type: "Long Sleeve",
     Price: "R400",
     Size: "XL",
