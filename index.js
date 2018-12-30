@@ -20,46 +20,67 @@ app.use('/bower_components', express.static(__dirname + '/bower_components'));
 // middleware above
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
-    extended: false
-  }))
-  // parse application/json
+  extended: false
+}))
+// parse application/json
 app.use(bodyParser.json())
 // <requests> now lets get ready for requests
 // app.get("/", products.home)
 app.get('/', function(req, res) {
   // console.log(products.getClothes());
   var clothes = [{
-    uploadPicture: "images/fashion_gallery/tshirt.jpg",
+    picture_Url: "images/fashion_gallery/tshirt.jpg",
     Type: "TShirt",
     Price: "R200",
     Size: "XS",
-    Qty: "2"
+    Qty: 1
   }, {
-    uploadPicture: "images/fashion_gallery/Optimized-cap.JPG",
+    picture_Url: "images/fashion_gallery/Optimized-cap.JPG",
     Type: "Cap",
     Price: "R200",
     Size: "M",
-    Qty: "2"
+    Qty: 2
   }, {
-    uploadPicture: "images/fashion_gallery/Optimized-long-sleeve.jpg",
+    picture_Url: "images/fashion_gallery/Optimized-long-sleeve.jpg",
     Type: "Long Sleeve",
     Price: "R400",
     Size: "XL",
-    Qty: "2"
+    Qty: 5
   }];
-  res.render('home');
+
+  var t_shirt_List = [];
+  var long_sleeve_List = [];
+  var cap_List = [];
+
+  clothes.forEach(function(item) {
+    if (item.Type === "TShirt") {
+      t_shirt_List.push(item);
+    }
+    if (item.Type === "Long Sleeve") {
+      long_sleeve_List.push(item);
+    }
+    if (item.Type === "Cap") {
+      cap_List.push(item);
+    }
+  })
+
+  res.render('home', {
+    tShirt : t_shirt_List,
+    longSleeve : long_sleeve_List,
+    cap : cap_List
+  });
 })
 
-app.post('/', function(req, res){
+app.post('/', function(req, res) {
   var input = JSON.parse(JSON.stringify(req.body));
-	var data = {
-		persons_name: input.name,
-		personal_message: input.message
-	};
+  var data = {
+    persons_name: input.name,
+    personal_message: input.message
+  };
 
   console.log("name :" + data.persons_name);
   console.log("message :" + data.personal_message);
-   res.send("recieved your request!");
+  res.send("recieved your request!");
 });
 app.get('about', function(req, res) {
   res.render('about');
