@@ -186,14 +186,16 @@ p {
   margin: 0 auto;
 }
 
-div#addProduct.post form input {
+div#addProductDiv.post form input {
   color: black;
 }
-div#addProduct.post form  {
+div#addProductDiv.post form  {
   color: #ed9217;
   display: inline-grid;
 }
-
+div#addProductDiv.post input.backButton{
+  background-color: orange;
+}
 div.ui-state-highlight.ui-corner-all {
   display: table-cell;
 }
