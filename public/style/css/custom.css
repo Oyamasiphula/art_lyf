@@ -489,21 +489,15 @@ svg {
 .formInput {
   height: 34px;
   border: 1px solid black;
-  width: 300px;
+  width: auto;
   font-size: initial;
 }
-div.emailBox {
-  margin-top: -40px;
-  }
+
  input.button {
   background-color: cornflowerblue;
   margin-top: 5px;
   display: block;
   color: antiquewhite;
-}
-small#emailText{
-  float: inherit;
-  font-size: large;
 }
 #source {
   font-size:14px;
@@ -513,10 +507,10 @@ small#emailText{
   margin-top: 10px;
   min-height: 10px;
   overflow: auto;
-  padding: 5px;
-  width: 33%;
+  padding: 50px;
+  width: auto;
   word-break: break-word;
-  max-width: 33%;
+  max-width: 71%;
   background-color: white;
 }
 
