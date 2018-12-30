@@ -3,10 +3,11 @@ var personalStatement = document.getElementById("personalStatement");
 var projectsDivContent = document.getElementById("projectsSection");
 var contactDivCont = document.getElementById("contactSection");
 var aboutMeDivCont = document.querySelectorAll("#aboutMeSection");
-
+var addProductDivCont = document.querySelectorAll("addProductDiv");
+var addProductButton = document.querySelectorAll("button");
 var selector = ".topnav li"
 
-function hideAboutCont(){
+function hideAboutCont() {
   aboutMeSection[0].classList.add("hide");
   aboutMeSection[1].classList.add("hide");
 };
@@ -45,4 +46,37 @@ about.addEventListener("click", function() {
   aboutMeSection[0].classList.remove("hide");
   aboutMeSection[1].classList.remove("hide");
 });
-// nav bar
+
+addButton[0].addEventListener("click", function() {
+  personalStatement.classList.add("hide");
+  contactDivCont.classList.add("hide");
+  projectsDivContent.classList.add("hide");
+  aboutMeSection[0].classList.add("hide");
+  aboutMeSection[1].classList.add("hide");
+  addProductDiv.classList.remove("hide")
+})
+addButton[1].addEventListener("click", function() {
+  personalStatement.classList.add("hide");
+  contactDivCont.classList.add("hide");
+  projectsDivContent.classList.add("hide");
+  aboutMeSection[0].classList.add("hide");
+  aboutMeSection[1].classList.add("hide");
+  addProductDiv.classList.remove("hide")
+})
+addButton[2].addEventListener("click", function() {
+  personalStatement.classList.add("hide");
+  contactDivCont.classList.add("hide");
+  projectsDivContent.classList.add("hide");
+  aboutMeSection[0].classList.add("hide");
+  aboutMeSection[1].classList.add("hide");
+  addProductDiv.classList.remove("hide")
+})
+
+back.addEventListener("click", function() {
+  personalStatement.classList.add("hide");
+  contactDivCont.classList.add("hide");
+  projectsDivContent.classList.remove("hide");
+  aboutMeSection[0].classList.add("hide");
+  aboutMeSection[1].classList.add("hide");
+  addProductDiv.classList.add("hide")
+})
