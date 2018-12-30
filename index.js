@@ -73,8 +73,8 @@ app.get('/', function(req, res) {
   });
 })
 
-app.post('/', emailUtility.sendMail, function(req, res) {
-
+app.post('/', function(req, res) {
+  emailUtility.sendMail(req, res)
   res.send("recieved your request!");
 });
 app.get('about', function(req, res) {

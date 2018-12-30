@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 
-exports.sendMail = function(req, res, next) {
+exports.sendMail = function(req, res) {
   var input = JSON.parse(JSON.stringify(req.body));
   var data = {
     persons_name: input.name,
@@ -45,5 +45,4 @@ exports.sendMail = function(req, res, next) {
       // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
     });
   });
-  next()
 }
