@@ -1,6 +1,8 @@
 var express = require('express'),
   exphbs = require('express-handlebars'),
   bodyParser = require('body-parser'),
+  nodemailer = require('nodemailer'),
+  emailUtility = require('./routes/sendMail'),
   products = require('./routes/product');
 
 var app = express();
@@ -65,21 +67,14 @@ app.get('/', function(req, res) {
   })
 
   res.render('home', {
-    tShirt : t_shirt_List,
-    longSleeve : long_sleeve_List,
-    cap : cap_List
+    tShirt: t_shirt_List,
+    longSleeve: long_sleeve_List,
+    cap: cap_List
   });
 })
 
 app.post('/', function(req, res) {
-  var input = JSON.parse(JSON.stringify(req.body));
-  var data = {
-    persons_name: input.name,
-    personal_message: input.message
-  };
-
-  console.log("name :" + data.persons_name);
-  console.log("message :" + data.personal_message);
+  emailUtility.sendMail(req, res)
   res.send("recieved your request!");
 });
 app.get('about', function(req, res) {
