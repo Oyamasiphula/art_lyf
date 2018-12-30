@@ -51,7 +51,7 @@
               {{this.Price}} : </strong><a href="#">Buy</a>
           {{/each}}
         </div>
-        <input class="button" type="button" name="" value=" + Add">
+        <input id="addButton" class="button" type="button" name="" value=" + Add">
       </div>
       <div id="tabs-2">
         <p>This is just a good Top for mid winter season.</p>
@@ -63,7 +63,7 @@
               {{this.Price}} : </strong><a href="#">Buy</a>
           {{/each}}
         </div>
-        <input class="button" type="button" name="" value=" + Add">
+        <input id="addButton" class="button" type="button" name="" value=" + Add">
       </div>
 
       <div id="tabs-3">
@@ -76,13 +76,13 @@
               {{this.Price}} : </strong><a href="#">Buy</a>
           {{/each}}
         </div>
-        <input class="button" type="button" name="" value=" + Add">
+        <input id="addButton" class="button" type="button" name="" value=" + Add">
       </div>
     </div>
   </div>
 </div>
 <div class="row">
-  <div id="addProduct" class="post hide">
+  <div id="addProductDiv" class="post hide">
     <form class="" action="/addProduct" method="post">
       <label for="avatar">Choose a file to upload:</label>
       <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
@@ -97,7 +97,9 @@
       Price : <input type="text" name="" value="">
       <input class="button" type="submit" name="" value="Submit">
 
-    </form>
+    </form><br>
+    <input id="back" class="backButton" type="submit" name="" value="Back">
+
   </div>
 </div>
 <div class="row">
