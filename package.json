@@ -26,6 +26,7 @@
     "bower": "^1.8.4",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
+    "nodemailer": "^5.0.0",
     "npm": "^6.5.0"
   }
 }
