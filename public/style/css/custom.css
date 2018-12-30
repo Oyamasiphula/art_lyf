@@ -23,10 +23,10 @@ ul.topnav {
 }
 
 ul.topnav li {
- display: -webkit-inline-box;
- border: 1px solid #b84348;
- border-radius: 5px;
- margin: 1px;
+  display: -webkit-inline-box;
+  border: 1px solid #b84348;
+  border-radius: 5px;
+  margin: 1px;
 }
 
 ul.topnav li a {
@@ -51,7 +51,7 @@ ul.topnav li.icon {
   display: none;
 }
 
-    /* {  height:20%;
+/* {  height:20%;
         width:20%} */
 .profilePic {
   background-repeat: no-repeat;
@@ -77,6 +77,7 @@ ul.topnav li.icon {
     float: right;
     display: inline-block;
   }
+
   img.profilePic {
     background-repeat: no-repeat;
     position: relative;
@@ -115,6 +116,7 @@ ul.topnav li.icon {
   padding: 25px;
   float: right;
 }
+
 .wrapper {
   margin-bottom: 0;
   text-align: center;
@@ -182,6 +184,14 @@ p {
   position: relative;
   width: 70%;
   margin: 0 auto;
+}
+
+div#addProduct.post form input {
+  color: black;
+}
+div#addProduct.post form  {
+  color: #ed9217;
+  display: inline-grid;
 }
 
 div.ui-state-highlight.ui-corner-all {
@@ -486,6 +496,7 @@ svg {
   font-size: 12px;
   font-weight: bold;
 }
+
 .formInput {
   height: 34px;
   border: 1px solid black;
@@ -493,14 +504,15 @@ svg {
   font-size: initial;
 }
 
- input.button {
+input.button {
   background-color: cornflowerblue;
   margin-top: 5px;
   display: block;
   color: antiquewhite;
 }
+
 #source {
-  font-size:14px;
+  font-size: 14px;
   border: 1px solid #ccc;
   height: 50px;
   border-radius: 5px;
@@ -579,6 +591,7 @@ svg {
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
 }
+
 small {
   font-size: 100%;
   float: right;
