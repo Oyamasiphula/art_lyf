@@ -54,22 +54,28 @@ addButton[0].addEventListener("click", function() {
   aboutMeSection[0].classList.add("hide");
   aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.remove("hide")
+window.history.pushState("object or string", "Title", "/addProduct");
 })
 addButton[1].addEventListener("click", function() {
+  location.href = '/addProduct'
   personalStatement.classList.add("hide");
   contactDivCont.classList.add("hide");
   projectsDivContent.classList.add("hide");
   aboutMeSection[0].classList.add("hide");
   aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.remove("hide")
+  window.history.pushState("object or string", "Title", "/addProduct");
+
 })
 addButton[2].addEventListener("click", function() {
+  location.href = '/addProduct'
   personalStatement.classList.add("hide");
   contactDivCont.classList.add("hide");
   projectsDivContent.classList.add("hide");
   aboutMeSection[0].classList.add("hide");
   aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.remove("hide")
+  window.history.pushState("object or string", "Title", "/addProduct");
 })
 
 back.addEventListener("click", function() {
@@ -79,4 +85,6 @@ back.addEventListener("click", function() {
   aboutMeSection[0].classList.add("hide");
   aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.add("hide")
+  window.history.pushState("object or string", "Title", "/");
+
 })
