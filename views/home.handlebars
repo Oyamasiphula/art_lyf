@@ -1,31 +1,12 @@
-<ul class="topnav" id="myTopnav">
-  <li><a id="home" class="active" href="#"><i class="fa fa-university" aria-hidden="true">
-        <h1><span>Art LyF</span></h1>
-      </i></a></li>
-  <li class="navItem"><a id="about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
-  <li class="navItem"><a id="contact"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Contact</a></li>
-  <li class="navItem"><a id="projects"><i class="fa fa-suitcase" aria-hidden="true"></i> Projects</a></li>
-  <li class="icon">
-    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()"><i class="fa fa-bars fa-1" aria-hidden="true"></i></a>
-  </li>
-</ul>
-<div class="wrapper">
-  <h3>Hi there! I am</h3>
-  <h2>Barngie</h2>
+<br>
+<div class="row">
+  <div id="personalStatement" class="post">
+    <div class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
+      <p>
 
-  <img class="profilePic" src="./images/Optimized-profile_Pic.JPG">
-  <br>
-  <span>I love&nbsp;</span><span class="text"></span><span class="cursor">|</span>
-  <br>
-  <div class="row">
-    <div id="personalStatement" class="post">
-      <div class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
-        <p>
-
-        </p>
-        <p><strong>Everything is possible</strong></p>
-        <img class="profilePic" src="images/IMG_4567.JPG" alt="">
-      </div>
+      </p>
+      <p><strong>Everything is possible</strong></p>
+      <img class="profilePic" src="images/IMG_4567.JPG" alt="">
     </div>
   </div>
 </div>
@@ -83,25 +64,24 @@
 </div>
 <div class="row">
   <div id="addProductDiv" class="post hide">
-    <form class="" action="/addProduct" method="post">
-      <label for="avatar">Choose a file to upload:</label>
-      <input type="file" id="avatar" name="pictureUrl" accept="image/png, image/jpeg">
-      Type : <select class="brandOptions" name="typeOfCloth">
-        <option class="placeHolder" value="" selected="true" disabled="">SELECT TYPE</option>
-        <option value="Cap">Cap</option>
-        <option value="Long Sleeve">Long Sleeve</option>
-      </select>
+      <form class="" action="/addProduct" method="post">
+        <label for="avatar">Choose a file to upload:</label>
+        <input type="file" id="avatar" name="pictureUrl" accept="image/png, image/jpeg">
+        Type : <select class="brandOptions" name="typeOfCloth">
+          <option class="placeHolder" value="" selected="true" disabled="">SELECT TYPE</option>
+          <option value="Cap">Cap</option>
+          <option value="Long Sleeve">Long Sleeve</option>
+        </select>
 
-      Size : <input type="number" name="size" value="">
+        Size : <input type="text" name="size" value="">
 
-      Quantity : <input type="number" name="qty" value="">
+        Quantity : <input type="number" name="qty" value="">
 
-      Price : <input type="text" name="price" value="">
-      <input class="button" type="submit" name="" value="Submit">
+        Price : <input type="text" name="price" value="">
+        <input class="button" type="submit" name="" value="Submit">
 
-    </form><br>
-    <input id="back" class="backButton" type="submit" name="" value="Back">
-
+      </form><br>
+      <input id="back" class="backButton" type="submit" name="" value="Back">
   </div>
 </div>
 <div class="row">
