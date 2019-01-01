@@ -28,27 +28,29 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 // <requests> now lets get ready for requests
 // app.get("/", products.home)
+
+var clothes = [{
+  picture_Url: "images/fashion_gallery/tshirt.jpg",
+  Type: "TShirt",
+  Size: "XS",
+  Qty: 1,
+  Price: "R200"
+}, {
+  picture_Url: "images/fashion_gallery/Optimized-cap.JPG",
+  Type: "Cap",
+  Size: "M",
+  Qty: 2,
+  Price: "R200"
+}, {
+  picture_Url: "images/fashion_gallery/Optimized-long-sleeve.jpg",
+  Type: "Long Sleeve",
+  Size: "XL",
+  Qty: 5,
+  Price: "R400"
+}];
+
 app.get('/', function(req, res) {
   // console.log(products.getClothes());
-  var clothes = [{
-    picture_Url: "images/fashion_gallery/tshirt.jpg",
-    Type: "TShirt",
-    Price: "R200",
-    Size: "XS",
-    Qty: 1
-  }, {
-    picture_Url: "images/fashion_gallery/Optimized-cap.JPG",
-    Type: "Cap",
-    Price: "R200",
-    Size: "M",
-    Qty: 2
-  }, {
-    picture_Url: "images/fashion_gallery/Optimized-long-sleeve.jpg",
-    Type: "Long Sleeve",
-    Price: "R400",
-    Size: "XL",
-    Qty: 5
-  }];
 
   var t_shirt_List = [];
   var long_sleeve_List = [];
@@ -74,7 +76,21 @@ app.get('/', function(req, res) {
 })
 
 app.post('/', emailUtility.sendMail, function(req, res) {
-  res.send("recieved your request!");
+
+  res.render("sentSuccessfully");
+});
+
+app.post('/addProduct', function(req, res) {
+  var data = JSON.parse(JSON.stringify(req.body));
+  console.log(data);
+  var product = {
+    picture_Url: data.pictureUrl,
+    Type: data.typeOfCloth,
+    Size: data.size,
+    Qty: data.qty,
+    Price: data.price
+  }
+  res.redirect("/");
 });
 app.get('about', function(req, res) {
   res.render('about');
@@ -88,4 +104,4 @@ var port = process.env.PORT || 5000
 app.listen(port, function() {
   console.log('app is listening on' + port);
 });
-// </serveCodeBlocksRun>
+// </serveCodeBlocksRun> : data.
