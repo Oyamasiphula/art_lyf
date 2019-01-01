@@ -85,16 +85,18 @@
   <div id="addProductDiv" class="post hide">
     <form class="" action="/addProduct" method="post">
       <label for="avatar">Choose a file to upload:</label>
-      <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-      Type : <select class="brandOptions" name="">
+      <input type="file" id="avatar" name="pictureUrl" accept="image/png, image/jpeg">
+      Type : <select class="brandOptions" name="typeOfCloth">
         <option class="placeHolder" value="" selected="true" disabled="">SELECT TYPE</option>
         <option value="Cap">Cap</option>
         <option value="Long Sleeve">Long Sleeve</option>
       </select>
 
-      Quantity : <input type="number" name="" value="">
+      Size : <input type="number" name="size" value="">
 
-      Price : <input type="text" name="" value="">
+      Quantity : <input type="number" name="qty" value="">
+
+      Price : <input type="text" name="price" value="">
       <input class="button" type="submit" name="" value="Submit">
 
     </form><br>
