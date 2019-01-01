@@ -84,12 +84,14 @@ app.post('/addProduct', function(req, res) {
   var data = JSON.parse(JSON.stringify(req.body));
   console.log(data);
   var product = {
-    picture_Url: data.pictureUrl,
+    picture_Url: "images/fashion_gallery/" + data.pictureUrl,
     Type: data.typeOfCloth,
     Size: data.size,
     Qty: data.qty,
     Price: data.price
   }
+  clothes.push(product)
+  console.log(clothes);
   res.redirect("/");
 });
 app.get('about', function(req, res) {
