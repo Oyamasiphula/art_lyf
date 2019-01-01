@@ -23,6 +23,8 @@ home.addEventListener("click", function() {
   projectsDivContent.classList.add("hide");
   contactDivCont.classList.add("hide");
   personalStatement.classList.remove("hide");
+  window.history.pushState("object or string", "Title", "/home");
+
 });
 
 projects.addEventListener("click", function() {
@@ -30,6 +32,8 @@ projects.addEventListener("click", function() {
   personalStatement.classList.add("hide");
   contactDivCont.classList.add("hide");
   projectsDivContent.classList.remove("hide");
+  window.history.pushState("object or string", "Title", "/projects");
+
 });
 
 contact.addEventListener("click", function() {
@@ -37,6 +41,8 @@ contact.addEventListener("click", function() {
   personalStatement.classList.add("hide");
   projectsDivContent.classList.add("hide");
   contactDivCont.classList.remove("hide");
+  window.history.pushState("object or string", "Title", "/contact");
+
 });
 
 about.addEventListener("click", function() {
@@ -57,7 +63,6 @@ addButton[0].addEventListener("click", function() {
 window.history.pushState("object or string", "Title", "/addProduct");
 })
 addButton[1].addEventListener("click", function() {
-  location.href = '/addProduct'
   personalStatement.classList.add("hide");
   contactDivCont.classList.add("hide");
   projectsDivContent.classList.add("hide");
@@ -68,7 +73,6 @@ addButton[1].addEventListener("click", function() {
 
 })
 addButton[2].addEventListener("click", function() {
-  location.href = '/addProduct'
   personalStatement.classList.add("hide");
   contactDivCont.classList.add("hide");
   projectsDivContent.classList.add("hide");
@@ -85,6 +89,6 @@ back.addEventListener("click", function() {
   aboutMeSection[0].classList.add("hide");
   aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.add("hide")
-  window.history.pushState("object or string", "Title", "/");
+  window.history.pushState("object or string", "Title", "/projects");
 
 })
