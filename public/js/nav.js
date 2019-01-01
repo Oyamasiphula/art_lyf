@@ -23,6 +23,7 @@ home.addEventListener("click", function() {
   projectsDivContent.classList.add("hide");
   contactDivCont.classList.add("hide");
   personalStatement.classList.remove("hide");
+  addProductDiv.classList.add("hide");
   window.history.pushState("object or string", "Title", "/home");
 
 });
@@ -32,6 +33,7 @@ projects.addEventListener("click", function() {
   personalStatement.classList.add("hide");
   contactDivCont.classList.add("hide");
   projectsDivContent.classList.remove("hide");
+  addProductDiv.classList.add("hide");
   window.history.pushState("object or string", "Title", "/projects");
 
 });
@@ -41,6 +43,7 @@ contact.addEventListener("click", function() {
   personalStatement.classList.add("hide");
   projectsDivContent.classList.add("hide");
   contactDivCont.classList.remove("hide");
+  addProductDiv.classList.add("hide");
   window.history.pushState("object or string", "Title", "/contact");
 
 });
