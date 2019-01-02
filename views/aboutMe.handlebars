@@ -1,0 +1,62 @@
+<div class="row">
+  <div id="aboutMeSection" class="post">
+    <div class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
+      <section id="about-me">
+      </section>
+      <p>I started something in 20...</p>
+    </div>
+  </div>
+  <br>
+  <div id="aboutMeSection" class="post">
+    <div class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
+      <section id="about-me">
+        <ul class="tabs mobile-tabs">
+          <li id="info-tap" class="tab-item" data-index="4">
+            <span class="tab-info">Info</span>
+            <i class="fa fa-info"></i>
+          </li>
+
+          <li id="soft-tap" class="tab-item" data-index="2">
+            <span class="tab-info">Statistics</span>
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+          </li>
+          <li id="technical-tap" class="tab-item" data-index="1">
+            <span class="tab-info">Head wear</span>
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </section>
+
+      <div id="container" class="soft hide">
+        <p>Body Wear</p>
+        <div class="fundo">
+          <div id="progresso1">
+            <span class="area ">Long Sleeves</span>
+            <span class="porcentagem ">80%</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="container" class="tech hide">
+        <p>Tech stack Box</p>
+        <div class="fundo">
+          <div id="progresso1">
+            <span class="area ">Orange caps</span>
+            <span class="porcentagem ">100%</span>
+          </div>
+        </div>
+
+        <svg id="sticky-svg-filter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="gooey">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/info.js"></script>
+  
