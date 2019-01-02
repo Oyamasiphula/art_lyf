@@ -19,78 +19,37 @@ $(selector).on('click', function() {
 });
 
 home.addEventListener("click", function() {
-  hideAboutCont();
-  projectsDivContent.classList.add("hide");
-  contactDivCont.classList.add("hide");
-  personalStatement.classList.remove("hide");
-  addProductDiv.classList.add("hide");
-  window.history.pushState("object or string", "Title", "/home");
-
+  window.location = "/"
 });
 
 projects.addEventListener("click", function() {
-  hideAboutCont();
-  personalStatement.classList.add("hide");
-  contactDivCont.classList.add("hide");
-  projectsDivContent.classList.remove("hide");
-  addProductDiv.classList.add("hide");
-  window.history.pushState("object or string", "Title", "/projects");
-
+  window.location = "projects"
 });
 
 contact.addEventListener("click", function() {
-  hideAboutCont();
-  personalStatement.classList.add("hide");
-  projectsDivContent.classList.add("hide");
-  contactDivCont.classList.remove("hide");
-  addProductDiv.classList.add("hide");
-  window.history.pushState("object or string", "Title", "/contact");
-
+  window.location = "/contact";
 });
 
 about.addEventListener("click", function() {
-  personalStatement.classList.add("hide");
-  contactDivCont.classList.add("hide");
-  projectsDivContent.classList.add("hide");
-  aboutMeSection[0].classList.remove("hide");
-  aboutMeSection[1].classList.remove("hide");
+  window.location = "/about"
 });
 
 addButton[0].addEventListener("click", function() {
-  personalStatement.classList.add("hide");
-  contactDivCont.classList.add("hide");
   projectsDivContent.classList.add("hide");
-  aboutMeSection[0].classList.add("hide");
-  aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.remove("hide")
-window.history.pushState("object or string", "Title", "/addProduct");
 });
 addButton[1].addEventListener("click", function() {
-  personalStatement.classList.add("hide");
-  contactDivCont.classList.add("hide");
   projectsDivContent.classList.add("hide");
-  aboutMeSection[0].classList.add("hide");
-  aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.remove("hide")
-  window.history.pushState("object or string", "Title", "/addProduct");
 
 });
 addButton[2].addEventListener("click", function() {
-  personalStatement.classList.add("hide");
-  contactDivCont.classList.add("hide");
   projectsDivContent.classList.add("hide");
-  aboutMeSection[0].classList.add("hide");
-  aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.remove("hide")
-  window.history.pushState("object or string", "Title", "/addProduct");
 });
 
 back.addEventListener("click", function() {
-  personalStatement.classList.add("hide");
-  contactDivCont.classList.add("hide");
   projectsDivContent.classList.remove("hide");
-  aboutMeSection[0].classList.add("hide");
-  aboutMeSection[1].classList.add("hide");
   addProductDiv.classList.add("hide")
   window.history.pushState("object or string", "Title", "/projects");
 });
