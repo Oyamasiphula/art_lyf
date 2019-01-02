@@ -49,9 +49,26 @@ var clothes = [{
   Price: "R400"
 }];
 
-app.get('/', function(req, res) {
-  // console.log(products.getClothes());
+app.get('/', (req, res) => {
+  res.render('home')
+});
 
+app.post('/addProduct', (req, res) => {
+  var data = JSON.parse(JSON.stringify(req.body));
+  console.log(data);
+  var product = {
+    picture_Url: "images/fashion_gallery/" + data.picture_Url,
+    Type: data.typeOfCloth,
+    Size: data.size,
+    Qty: data.qty,
+    Price: data.price
+  }
+  clothes.push(product)
+  console.log(clothes);
+  res.redirect("/");
+});
+
+app.get('/projects', (req, res) => {
   var t_shirt_List = [];
   var long_sleeve_List = [];
   var cap_List = [];
@@ -66,37 +83,26 @@ app.get('/', function(req, res) {
     if (item.Type === "Cap") {
       cap_List.push(item);
     }
-  })
+  });
 
-  res.render('home', {
+
+  res.render('projects', {
     tShirt: t_shirt_List,
     longSleeve: long_sleeve_List,
     cap: cap_List
   });
-})
+});
 
-app.post('/', emailUtility.sendMail, function(req, res) {
+app.get('/contact', (req, res) => {
+  res.render("contactMe");
+});
 
+app.post('/contact', emailUtility.sendMail, (req, res) => {
   res.render("sentSuccessfully");
 });
 
-app.post('/addProduct', function(req, res) {
-  var data = JSON.parse(JSON.stringify(req.body));
-  console.log(data);
-  var product = {
-    picture_Url: "images/fashion_gallery/" + data.pictureUrl,
-    Type: data.typeOfCloth,
-    Size: data.size,
-    Qty: data.qty,
-    Price: data.price
-  }
-  clothes.push(product)
-  console.log(clothes);
-  res.redirect("/");
-});
-app.get('about', function(req, res) {
-  res.render('about');
-
+app.get('/about', (req, res) => {
+  res.render('aboutMe');
 })
 // <portSetup>port delcaration
 var port = process.env.PORT || 5000
