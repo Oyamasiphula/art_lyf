@@ -64,9 +64,12 @@ ul.topnav li.icon {
 
 .ads {
   margin-top: 1em;
+  height: 160px;
+  width: 160px;
 }
+
 div.ui-state-highlight.ui-corner-all {
-display: table-cell;
+  display: table-cell;
 }
 
 @media screen and (max-width:680px) {
@@ -115,6 +118,7 @@ display: table-cell;
     display: block;
     text-align: left;
   }
+
   div.ui-state-highlight.ui-corner-all {
     display: inline-table;
   }
@@ -206,7 +210,6 @@ div#addProductDiv.post form {
 div#addProductDiv.post input.backButton {
   background-color: orange;
 }
-
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   border: 1px solid #cccccc;
