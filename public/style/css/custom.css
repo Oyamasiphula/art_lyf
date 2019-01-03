@@ -61,8 +61,12 @@ ul.topnav li.icon {
   margin-left: auto;
   margin-right: auto;
 }
+
 .ads {
   margin-top: 1em;
+}
+div.ui-state-highlight.ui-corner-all {
+display: table-cell;
 }
 
 @media screen and (max-width:680px) {
@@ -85,6 +89,10 @@ ul.topnav li.icon {
     margin-left: auto;
     margin-right: auto;
   }
+
+  div.ui-state-highlight.ui-corner-all {
+    display: inline-table;
+  }
 }
 
 @media only screen and (max-width:990px) {
@@ -106,6 +114,9 @@ ul.topnav li.icon {
   ul.topnav.responsive li a {
     display: block;
     text-align: left;
+  }
+  div.ui-state-highlight.ui-corner-all {
+    display: inline-table;
   }
 }
 
@@ -196,9 +207,6 @@ div#addProductDiv.post input.backButton {
   background-color: orange;
 }
 
-div.ui-state-highlight.ui-corner-all {
-  display: table-cell;
-}
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   border: 1px solid #cccccc;
