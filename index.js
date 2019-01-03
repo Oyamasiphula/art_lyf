@@ -2,6 +2,10 @@ var express = require('express'),
   exphbs = require('express-handlebars'),
   bodyParser = require('body-parser'),
   nodemailer = require('nodemailer'),
+  multer = require('multer'),
+  upload = multer({
+    dest: 'public/images/fashion_gallery/'
+  }),
   emailUtility = require('./routes/sendMail'),
   products = require('./routes/product');
 
@@ -17,9 +21,6 @@ app.use(express.static(__dirname + '/public'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 // </layout>
 
-// middleware below
-// ...code
-// middleware above
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
   extended: false
@@ -53,19 +54,19 @@ app.get('/', (req, res) => {
   res.render('home')
 });
 
-app.post('/addProduct', (req, res) => {
+app.post('/projects', upload.single('picture_Url'), (req, res) => {
   var data = JSON.parse(JSON.stringify(req.body));
-  console.log(data);
+  let file_name = req.file.filename;
+
   var product = {
-    picture_Url: "images/fashion_gallery/" + data.picture_Url,
+    picture_Url: 'images/fashion_gallery/' + file_name,
     Type: data.typeOfCloth,
     Size: data.size,
     Qty: data.qty,
     Price: data.price
   }
   clothes.push(product)
-  console.log(clothes);
-  res.redirect("/");
+  res.redirect("/projects");
 });
 
 app.get('/projects', (req, res) => {
@@ -84,7 +85,6 @@ app.get('/projects', (req, res) => {
       cap_List.push(item);
     }
   });
-
 
   res.render('projects', {
     tShirt: t_shirt_List,
