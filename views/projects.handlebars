@@ -59,8 +59,9 @@
       <input type="file" id="avatar" name="picture_Url" accept="image/png, image/jpeg">
       Type : <select class="brandOptions" name="typeOfCloth">
         <option class="placeHolder" value="" selected="true" disabled="">SELECT TYPE</option>
-        <option value="Cap">Cap</option>
-        <option value="Long Sleeve">Long Sleeve</option>
+        {{#each categories}}
+        <option value="{{this.category}}">{{this.category}}</option>
+        {{/each}}
       </select>
 
       Size : <input type="text" name="size" value="">
