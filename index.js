@@ -69,19 +69,24 @@ app.post('/projects', upload.single('picture_Url'), (req, res) => {
   res.redirect("/projects");
 });
 
+var t_shirt_List = [];
+var long_sleeve_List = [];
+var cap_List = [];
+var categories = [];
+
 app.get('/projects', (req, res) => {
-  var t_shirt_List = [];
-  var long_sleeve_List = [];
-  var cap_List = [];
 
   clothes.forEach(function(item) {
     if (item.Type === "TShirt") {
+      categories.push({category: item.Type})
       t_shirt_List.push(item);
     }
     if (item.Type === "Long Sleeve") {
+      categories.push({category: item.Type})
       long_sleeve_List.push(item);
     }
     if (item.Type === "Cap") {
+      categories.push({category: item.Type})
       cap_List.push(item);
     }
   });
@@ -89,7 +94,8 @@ app.get('/projects', (req, res) => {
   res.render('projects', {
     tShirt: t_shirt_List,
     longSleeve: long_sleeve_List,
-    cap: cap_List
+    cap: cap_List,
+    categories : categories
   });
 });
 
