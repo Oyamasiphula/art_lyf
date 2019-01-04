@@ -67,6 +67,10 @@ ul.topnav li.icon {
   height: 160px;
   width: 160px;
 }
+svg.success-message__icon.icon-checkmark {
+  position: inherit;
+  padding-left: 47%;
+}
 
 div.ui-state-highlight.ui-corner-all {
   display: table-cell;
@@ -92,7 +96,10 @@ div.ui-state-highlight.ui-corner-all {
     margin-left: auto;
     margin-right: auto;
   }
-
+  svg.success-message__icon.icon-checkmark {
+      position: inherit;
+      padding-left: 34%;
+  }
   div.ui-state-highlight.ui-corner-all {
     display: inline-table;
   }
@@ -118,7 +125,10 @@ div.ui-state-highlight.ui-corner-all {
     display: block;
     text-align: left;
   }
-
+  svg.success-message__icon.icon-checkmark {
+    position: inherit;
+    padding-left: 42%;
+}
   div.ui-state-highlight.ui-corner-all {
     display: inline-table;
   }
@@ -552,10 +562,6 @@ input.button {
   transform: translate(-50%, -50%);
 }
 
-svg.success-message__icon.icon-checkmark {
-  position: inherit;
-  padding-left: 47%;
-}
 
 .success-message__icon {
   max-width: 75px;
